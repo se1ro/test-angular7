@@ -1,5 +1,4 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { SampleListComponent } from './sample-list/sample-list.component';
 
 @Component({
   selector: 'app-main',
@@ -7,5 +6,5 @@ import { SampleListComponent } from './sample-list/sample-list.component';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-  num: number = 2;
+  num: number = 1; // これが子コンポーネントに初期値として渡される
 }
