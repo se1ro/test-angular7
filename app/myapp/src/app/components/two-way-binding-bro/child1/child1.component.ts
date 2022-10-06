@@ -9,15 +9,13 @@ import { ValueSharedService  } from '../../../service/value-shared.service';
 })
 export class Child1Component implements OnInit {
 
-  form = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-  });
-
   constructor(private valueSharedService: ValueSharedService, private fb: FormBuilder) { }
 
-  ngOnInit() {
+  form = new FormGroup({});
 
+  // 描画時に1度だけ呼ばれる（Angularのライフサイクルの一部）
+  ngOnInit() {
+    // formとServiceのデータをバインド
     this.form = this.fb.group({
       lastName: this.valueSharedService.lastName,
       firstName: this.valueSharedService.firstName,
@@ -25,6 +23,7 @@ export class Child1Component implements OnInit {
   }
 
   onChangeName() {
+    // 変更するたびにformで取った各データをServiceに上書き
     this.valueSharedService.lastName = this.form.get('lastName').value;
     this.valueSharedService.firstName = this.form.get('firstName').value;
   }

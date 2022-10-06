@@ -9,9 +9,11 @@ import { ValueSharedService  } from '../../../service/value-shared.service';
 export class Child2Component {
 
   get fullName() {
+    // Serviceから値を取ってくる
     return `${this.valueSharedService.lastName} ${this.valueSharedService.firstName}`;
   }
 
+  // コンストラクターでServiceを初期化宣言
   constructor(private valueSharedService: ValueSharedService) { }
 
 }
