@@ -1,0 +1,6 @@
+<div>
+  <h2>双方向バインディング（親子間）のサンプル</h2>
+  <p>sample-listの各liをクリックすると、そのvalueを表示させる</p>
+  <app-sample-list [(value)]="num"></app-sample-list>
+  <div>子コンポーネントで選択されたliのvalue（num）: {{ num }}</div>
+</div>

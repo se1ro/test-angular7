@@ -1,0 +1,10 @@
+<div [formGroup]="form">
+  <p>入力するコンポーネントと出力するコンポーネントを分けてServiceで連携する</p>
+  <p>姓と名の入力欄に入力したら、フルネームが下に表示される</p>
+  <div>
+    <label>姓：<input type="text" formControlName="lastName" (change)="onChangeName()"></label>
+  </div>
+  <div>
+    <label>名：<input type="text" formControlName="firstName" (change)="onChangeName()"></label>
+  </div>
+</div>

@@ -11,4 +11,5 @@ services:
       - CHOKIDAR_USEPOLLING=true
     tty: true
     stdin_open: true
+    working_dir: /app/myapp
     restart: always

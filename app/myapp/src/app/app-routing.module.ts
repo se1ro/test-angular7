@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { TwoWayBindingBroComponent } from './components/two-way-binding-bro/two-way-binding-bro.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'main', component: MainComponent }
+  { path: '', component: MainComponent },
+  { path: 'two-way-binding', component: TwoWayBindingComponent },
+  { path: 'two-way-binding-bro', component: TwoWayBindingBroComponent }
 ];
 
 @NgModule({
